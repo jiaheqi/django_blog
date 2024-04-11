@@ -208,6 +208,7 @@ SITE_ID = 1
 # 重定向 url
 LOGIN_REDIRECT_URL = '/'
 
+
 # LOGGING = {
 #     'version': 1,
 #     'handlers': {
@@ -277,3 +278,11 @@ LOGIN_REDIRECT_URL = '/'
 #         },
 #     }
 # }
+# 关闭调试模式
+DEBUG = False
+
+# 允许的服务器
+ALLOWED_HOSTS = ['*']
+
+# 静态文件收集目录
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
