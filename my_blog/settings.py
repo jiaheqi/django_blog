@@ -279,7 +279,7 @@ LOGIN_REDIRECT_URL = '/'
 #     }
 # }
 # 关闭调试模式
-DEBUG = False
+DEBUG = True
 
 # 允许的服务器
 ALLOWED_HOSTS = ['*']
