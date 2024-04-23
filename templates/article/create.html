@@ -57,17 +57,23 @@
                            name="tags"
                     >
                 </div>
-
+<script src="/static/ckeditor/ckeditor.js"></script>
                 <!-- 文章正文 -->
                 <div class="form-group">
-                    <label for="body">文章正文</label>
+                    <label for="body" >文章正文</label>
                     <!-- 文本区域 -->
-                    <textarea type="text" 
-                              class="form-control" 
-                              id="body" 
-                              name="body" 
+                    <textarea type="text"
+                              class="form-control"
+                              id="body"
+                              name="body"
                               rows="12"
                     ></textarea>
+                    <script>
+         window.onload = function() {
+        CKEDITOR.replace( 'body' );
+    };
+</script>
+
                 </div>
                 <!-- 提交按钮 -->
                 <button type="submit" class="btn btn-primary">完成</button>
