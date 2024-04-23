@@ -1,4 +1,6 @@
 from django.urls import path
+from django.views.generic import TemplateView
+
 # 引入views.py
 from . import views
 
@@ -26,4 +28,7 @@ urlpatterns = [
     path('detail-view/<int:pk>/', views.ArticleDetailView.as_view(), name='detail_view'),
     # 创建类视图
     path('create-view/', views.ArticleCreateView.as_view(), name='create_view'),
+    path('about/', TemplateView.as_view(template_name='article/about.html'), name='about'),
+    path('links/', TemplateView.as_view(template_name='article/links.html'), name='links')
+
 ]

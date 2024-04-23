@@ -1,3 +1,4 @@
+import mdeditor
 from django.contrib import admin
 # 记得引入include
 from django.urls import path, include
@@ -29,5 +30,7 @@ urlpatterns = [
     path('notice/', include('notice.urls', namespace='notice')),
     # django-allauth
     path('accounts/', include('allauth.urls')),
+    path('mdeditor/',include('mdeditor.urls')),
+    path('ckeditor/',include('ckeditor_uploader.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,134 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load my_filters_and_tags %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    友链
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+
+<!-- 定义放置文章标题的div容器 -->
+<div class="container nopadding-x-md">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 m-auto">
+     </div>
+    </div>
+
+  <main>
+
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+
+
+<div class="row links">
+
+
+    <div class="card col-lg-4 col-md-6 col-sm-12">
+      <a href="https://acoier.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
+        <div class="card-content">
+
+            <div class="link-avatar my-auto">
+              <img src="https://acoier.com/oimg/RoundCorner.png"  lazyload alt="宫水三叶の刷题日记"
+                   onerror="this.onerror=null; this.src=this.srcset='/static/images/catty.png'"/>
+            </div>
+
+          <div class="link-text">
+            <div class="link-title">宫水三叶の刷题日记</div>
+            <div class="link-intro">三叶学姐的主页</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+{#    <div class="card col-lg-4 col-md-6 col-sm-12">#}
+{#      <a href="https://ac-mikoto.top/" class="card-body hover-with-bg" target="_blank" rel="noopener">#}
+{#        <div class="card-content">#}
+{##}
+{#            <div class="link-avatar my-auto">#}
+{#              <img src="https://ac-mikoto.top/img/background/mikoto.jpg"  lazyload alt="Misaka Mikoto"#}
+{#                   onerror="this.onerror=null; this.src=this.srcset='/static/images/catty.png'"/>#}
+{#            </div>#}
+{##}
+{#          <div class="link-text">#}
+{#            <div class="link-title">Misaka Mikoto</div>#}
+{#            <div class="link-intro">你指尖跃动的电光,是我此生不灭的信仰</div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </a>#}
+{#    </div>#}
+{##}
+{##}
+{#    <div class="card col-lg-4 col-md-6 col-sm-12">#}
+{#      <a href="https://www.eririspace.cn/" class="card-body hover-with-bg" target="_blank" rel="noopener">#}
+{#        <div class="card-content">#}
+{##}
+{#            <div class="link-avatar my-auto">#}
+{#              <img src="https://www.eririspace.cn/medias/err2.jpg"  lazyload alt="金毛败犬の秘密空间"#}
+{#                   onerror="this.onerror=null; this.src=this.srcset='/static/images/catty.png'"/>#}
+{#            </div>#}
+{##}
+{#          <div class="link-text">#}
+{#            <div class="link-title">金毛败犬の秘密空间</div>#}
+{#            <div class="link-intro">梦想是成为 Golang 后端工程师</div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </a>#}
+{#    </div>#}
+
+</div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+
+
+
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+    </div>
+  </div>
+{% endblock content %}

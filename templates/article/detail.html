@@ -9,7 +9,7 @@
 
 <!-- 写入 base.html 中定义的 content -->
 {% block content %}
-<script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+<script src="{% static 'ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
 <link rel="stylesheet" href="{% static 'prism/prism.css' %}">
 
 <!-- 文章详情 -->
@@ -112,6 +112,12 @@
                                 {{ comment_form.media }}
                                 {{ comment_form.body }}
                             </div>
+{#                            <textarea#}
+{#                        type="text"#}
+{#                        class="form-control"#}
+{#                        id="body"#}
+{#                        name="body"#}
+{#                        rows="2"></textarea>#}
                         </div>
                         <!-- 提交按钮 -->
                         <button type="submit" class="btn btn-primary ">发送</button>

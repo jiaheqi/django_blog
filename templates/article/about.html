@@ -1,0 +1,147 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load my_filters_and_tags %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    关于
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+
+<!-- 定义放置文章标题的div容器 -->
+    <div class="py-5" id="board"
+      >
+
+        <div class="about-avatar">
+          <img src="/static/images/avatar.jpg"  lazyload
+               class="img-fluid" alt="avatar">
+        </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 m-auto">
+
+
+<div class="text-center">
+<div class="about-info">
+<div class="about-name">狗卷七</div>
+<div class="about-intro">三分钟热度重症患者自愈中...~</div>
+<div class="about-icons">
+
+
+
+
+    <a href=https://github.com/jiaheqi class="
+       hint--bottom hint--rounded"
+       aria-label=GitHub
+       target="_blank"
+    >
+      <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+
+    </a>
+
+
+
+
+{#    <a href=https://space.bilibili.com/294970585 class="#}
+{#       hint--bottom hint--rounded"#}
+{#       aria-label=Bilibili#}
+{#       target="_blank"#}
+{#    >#}
+{#      <i class="iconfont icon-bilibili" aria-hidden="true"></i>#}
+{##}
+{#    </a>#}
+
+
+
+
+{#    <a href=https://www.zhihu.com/people/heyoaoaya class="#}
+{#       hint--bottom hint--rounded"#}
+{#       aria-label=知乎#}
+{#       target="_blank"#}
+{#    >#}
+{#      <i class="iconfont icon-zhihu-fill" aria-hidden="true"></i>#}
+{##}
+{#    </a>#}
+        <a href=https://www.zhihu.com/people/heyoaoaya class="
+       hint--bottom hint--rounded"
+       aria-label="小红书"
+       target="_blank"
+    >
+      <i class="iconfont icon-" aria-hidden="true"></i>
+    </a>
+
+
+
+
+    <a  class="qr-trigger
+       "
+       target="_self"
+    >
+      <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
+
+        <img class="qr-img" src="/static/images/wechat.jpg"  lazyload alt="qrcode" />
+
+    </a>
+
+
+
+
+    <a  class="qr-trigger
+       "
+
+       target="_self"
+    >
+      <i class="iconfont icon-mini-program-fill" aria-hidden="true"></i>
+
+        <img class="qr-img" src="/static/images/wechat.jpg"  lazyload alt="qrcode" />
+
+    </a>
+
+</div>
+</div>
+</div>
+
+<article class="about-content page-content mt-5">
+<div class="markdown-body">
+<p>Hi，这里是「狗卷同学」的学习秘密基地  🎉 🎉</p>
+<p>希望能通过一些监督让自己不断进步 ~</p>
+<div style="heigth:800px;text-align:center"><img src="/static/images/candy.jpg"  lazyload style="zoom:35%;" text-align:center vertical-align:middle><br><br><div>所有 🍬 将会用于后续个人网站建设 🏡</div></div>
+<p><strong>投食记录公示 ❤️</strong> ：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">昵称</th>
+<th style="text-align:left">日期</th>
+<th style="text-align:left">金额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">YOLO</td>
+<td style="text-align:left">2022-05-12</td>
+<td style="text-align:left">3.00</td>
+</tr>
+<tr>
+<td style="text-align:left">Benhao</td>
+<td style="text-align:left">2022-05-12</td>
+<td style="text-align:left">10.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
