@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 # 引入HttpResponse
 from django.http import HttpResponse
+from taggit.models import Tag
+
 # 导入数据模型ArticlePost, ArticleColumn
 from .models import ArticlePost, ArticleColumn
 # 引入刚才定义的ArticlePostForm表单类
@@ -84,6 +86,15 @@ def article_list(request):
     }
     # render函数：载入模板，并返回context对象
     return render(request, 'article/list.html', context)
+
+
+def tags_list(request):
+    all_tags = Tag.objects.all()
+    context = {
+        'all_tags': all_tags,
+    }
+    # render函数：载入模板，并返回context对象
+    return render(request, 'article/tag_list.html', context)
 
 
 # 文章详情

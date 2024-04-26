@@ -5,15 +5,18 @@ import datetime
 
 register = template.Library()
 
+
 @register.filter(name='transfer')
 def transfer(value, arg):
     """将输出强制转换为字符串 arg"""
     return arg
 
+
 @register.filter()
 def lower(value):
     """将字符串转换为小写字符"""
     return value.lower()
+
 
 @register.filter(name='timesince_zh')
 def time_since_zh(value):
@@ -39,13 +42,21 @@ def time_since_zh(value):
     if diff.days >= 365:
         return str(math.floor(diff.days / 365)) + "年前"
 
+
 @register.simple_tag
 def current_time(format_string):
     """当前时间格式化"""
     return datetime.datetime.now().strftime(format_string)
+
 
 @register.inclusion_tag('article/tag_list.html')
 def show_comments_pub_time(article):
     """显示文章评论的发布时间"""
     comments = article.comments.all()
     return {'comments': comments}
+
+
+@register.filter(name='divisibleby')
+def divisibleby(value, arg):
+    """Returns True if the value is divisible by the argument."""
+    return value % arg == 0

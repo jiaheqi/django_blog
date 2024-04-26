@@ -1,5 +1,49 @@
-<ul>
-{% for comment in comments %}
-    <li> {{ comment.created }} </li>
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load my_filters_and_tags %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    关于
+{% endblock title %}
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+
+<!-- 定义放置文章标题的div容器 -->
+    <div class="py-5" id="board"
+      >
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 m-auto">
+<article class="about-content page-content mt-5">
+<div class="text-center tagcloud">
+{% for tag in all_tags %}
+    {% if forloop.counter0|divisibleby:2 %}
+        <a href="{% url 'article:article_list' %}?tag={{ tag }}"
+           style="font-size: 26.14px; color: #568bc5;"
+        >
+            {{ tag }}
+        </a>
+    {% else %}
+        <a href="{% url 'article:article_list' %}?tag={{ tag }}"
+          style="font-size: 15.86px; color: #b3b7eb"
+        >
+            {{ tag }}
+        </a>
+    {% endif %}
 {% endfor %}
-</ul>
+
+</div>
+
+
+</article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
