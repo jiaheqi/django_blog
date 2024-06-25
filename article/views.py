@@ -153,6 +153,16 @@ def article_detail(request, id):
     return render(request, 'article/detail.html', context)
 
 
+def notify_success(request):
+    # 你可以根据需要处理请求数据，这里简化处理直接返回成功信息
+    return HttpResponse("success")
+
+
+def notify_failure(request):
+    # 同样，这里简化处理直接返回失败信息
+    return HttpResponse("failure")
+
+
 # 写文章的视图
 @login_required(login_url='/userprofile/login/')
 def article_create(request):
