@@ -10,7 +10,6 @@ import notifications.urls
 
 from article.views import article_list
 
-
 # 存放了映射关系的列表
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +29,7 @@ urlpatterns = [
     path('notice/', include('notice.urls', namespace='notice')),
     # django-allauth
     path('accounts/', include('allauth.urls')),
-    path('mdeditor/',include('mdeditor.urls')),
-    path('ckeditor/',include('ckeditor_uploader.urls')),
+    path('mdeditor/', include('mdeditor.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
