@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 # 引入HttpResponse
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from taggit.models import Tag
 
 # 导入数据模型ArticlePost, ArticleColumn
@@ -152,12 +153,12 @@ def article_detail(request, id):
     # 载入模板，并返回context对象
     return render(request, 'article/detail.html', context)
 
-
+@csrf_exempt
 def notify_success(request):
     # 你可以根据需要处理请求数据，这里简化处理直接返回成功信息
-    return HttpResponse("success")
+    return HttpResponse('success')
 
-
+@csrf_exempt
 def notify_failure(request):
     # 同样，这里简化处理直接返回失败信息
     return HttpResponse("failure")
