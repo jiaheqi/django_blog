@@ -245,12 +245,12 @@
 ## 教程快照
 
 **博客首页片段：**
-![](https://github.com/jiaheqi/django_blog/blob/master/static/images/shouye.png)
+![](http://http://43.135.150.180:7000//shouye/)
 
 ---
 
 **博客详情页片段：**
-![](https://github.com/jiaheqi/django_blog/blob/master/static/images/xiangqing.png)
+![](http://http://43.135.150.180:7000//xiangqing/)
 
 ## 代码使用说明
 确认你的电脑已经正确安装 Python 3.4 以上的版本。
@@ -293,7 +293,7 @@ python manage.py runserver  0.0.0.0:port
 
 数据库文件`db.sqlite3`以及媒体文件夹`media`中的内容是方便读者查看示例效果而存在的。
 
-master版本管理员账号：dusai  密码：adminpassword
+master版本管理员账号：admin  密码：1234
 
 如果你想清除所有数据及媒体文件，将它们直接删除，并运行：
 
