@@ -30,7 +30,7 @@ urlpatterns = [
     path('create-view/', views.ArticleCreateView.as_view(), name='create_view'),
     path('about/', TemplateView.as_view(template_name='article/about.html'), name='about'),
     path('links/', TemplateView.as_view(template_name='article/links.html'), name='links'),
-    path('tags/', views.tags_list, name='all_tags'),
+    patGITh('tags/', views.tags_list, name='all_tags'),
     path('notifySuccess/', views.notify_success, name='notify_success'),
     path('notifyFailure/', views.notify_failure, name='notify_failure'),
 ]
