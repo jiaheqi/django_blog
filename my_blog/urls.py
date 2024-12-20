@@ -7,6 +7,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 import notifications.urls
+from django.views.static import serve
 
 from article.views import article_list
 
@@ -31,5 +32,9 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('mdeditor/', include('mdeditor.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    # quick-view
+    path('shouye/', serve, {'document_root': 'static/images', 'path': 'shouye.png'}),
+    path('shouye/', serve, {'document_root': 'static/images', 'path': 'xiangqing.png'}),
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
