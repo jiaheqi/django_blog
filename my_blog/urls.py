@@ -34,7 +34,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     # quick-view
     path('shouye/', serve, {'document_root': 'static/images', 'path': 'shouye.png'}),
-    path('shouye/', serve, {'document_root': 'static/images', 'path': 'xiangqing.png'}),
+    path('xiangqing/', serve, {'document_root': 'static/images', 'path': 'xiangqing.png'}),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
